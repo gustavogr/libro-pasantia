@@ -35,6 +35,9 @@
 % Para texto Lorem Ipsum
 \usepackage{blindtext}
 
+% Para tener mas de un título
+\usepackage{titling}
+
 % Paquetes locales
 % Puedes agregar paquetes locales (archivos .sty) en un subdirectorio % 'paquetes'.
 % Utiliza la sintaxis \usepackage{paquetes/nombrePaquete}
@@ -43,7 +46,7 @@
 \graphicspath{{img/}}
 
 % Sangrías de 3 espacios (3 veces el espacio de la x)
-\parindent 3ex 
+\parindent 3ex
 
 % Interlineado
 \setlength{\baselineskip}{1.5pt}
@@ -61,27 +64,30 @@
         \large Universidad Simón Bolívar \\
         Decanato de Estudios Profesionales \\
         Coordinación de Ingeniería de la Computación
-        \vfill \LARGE @títuloProyecto \vfill}
+        \vfill \LARGE \bfseries Desarrollo de nuevos componentes de las arquitecturas
+        tecnológicas utilizadas por BBVA \vfill}
     \author{Por: \\
-        @autor1 \\
-        @autor2 \\[1.2cm]
-        Realizado con la asesoría de: \\
-        @tutor \\[1.2cm]
-        PROYECTO DE GRADO \\
+        Gustavo Antonio Gutiérrez Rondón \\[1.2cm]
+        \bfseries{INFORME DE PASANTÍAS} \\
 Presentado ante la Ilustre Universidad Simón Bolívar \\
 como requisito parcial para optar al título de \\
 Ingeniero de Computación}
-    \date{Sartenejas, @mes de @año}
+    \date{\bfseries Sartenejas, Octubre de 2017}
 \end{titlepage}
 
 \begin{document}
 \frontmatter
+% Carátula
 \maketitle
+
+% Título
+\input{./partes/titulo}
+
 \setstretch{1.3}
 
 % Se incluye el acta de evaluación, verificar que se corresponda
 % con el formato aceptado actualmente por el Decanato.
-\input{./partes/acta} 
+\input{./partes/acta}
 
 % El resumen debe ser de una sola página
 \addtotoc{Resumen}
@@ -99,6 +105,21 @@ Ingeniero de Computación}
 % Iniciar nueva página luego del resumen
 \clearpage
 \setstretch{1.3}
+
+% Begin the Dedication page
+
+\setstretch{1.3}  % Return the line spacing back to 1.3
+
+\pagestyle{empty}  % Page style needs to be empty for this page
+
+\dedicatory{
+    \textbf{Dedicatoria} \bigskip
+
+    A mi familia, quienes son las bases sobre las que se levantan todos mis logros.
+}
+
+\addtocontents{toc}{\vspace{2em}}
+
 
 % Agradecimientos
 \acknowledgements{
@@ -136,7 +157,7 @@ Ingeniero de Computación}
 {
 
     % Aquí van las siglas
-    \textbf{SIGLAS} & \textbf{S}iglas \textbf{I}sla \textbf{G}rafo 
+    \textbf{SIGLAS} & \textbf{S}iglas \textbf{I}sla \textbf{G}rafo
                       \textbf{L}aos \textbf{A}ve \textbf{S}erpiente\\
     \textbf{ACM} & \textbf{A}ssociation for \textbf{C}omputing \textbf{M}achinery\\
     &\\
@@ -151,19 +172,6 @@ Ingeniero de Computación}
 
 %% ----------------------------------------------------------------
 % End of the pre-able, contents and lists of things
-% Begin the Dedication page
-
-\setstretch{1.3}  % Return the line spacing back to 1.3
-
-\pagestyle{empty}  % Page style needs to be empty for this page
-
-\dedicatory{
-    \textbf{Dedicatoria} \bigskip
-
-    A @personasImportantes, por @razonesDedicatoria.
-}
-
-\addtocontents{toc}{\vspace{2em}}
 
 \mainmatter
 \pagestyle{fancy}
