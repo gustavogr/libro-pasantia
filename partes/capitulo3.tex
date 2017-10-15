@@ -14,7 +14,8 @@ que muchos programadores puedan alcanzar fluidez en el lenguaje. (\cite{JAVA})
 
 \section{OSGI}
 
-OSGI es un conjunto de especificaciones que definen un sistema dinámico formado por componentes
+OSGI (\emph{(Open Service Gateway Initiative)}) es un conjunto de especificaciones
+que definen un sistema dinámico formado por componentes
 para Java. Estas especificaciones permiten un modelo de desarrollo donde las aplicaciones
 son dinámicamente compuestas por muchos componentes reutilizables (\cite{OSGI}).
 
@@ -29,7 +30,7 @@ En la figura \ref{layers} se describe el modelo por capas definido por OSGI:
 
 La siguiente lista contiene una breve descripción de los términos:
 \begin{itemize}
-\item \textbf{Bundles}: los Bundles son los componentes de OSGi hechos por los desarrolladores.
+\item \textbf{Bundles}: los Bundles son los componentes de OSGI hechos por los desarrolladores.
 \item \textbf{Servicios}: la capa de servicios conecta bundles de una manera dinámica intercambiando objectos Java.
 \item \textbf{Ciclo de vida}: el API para instalar, arrancar, detener, actualizar y desinstalar un bundle.
 \item \textbf{Módulos}: la capa que define como un bundle puede importar y exportar código.
@@ -103,3 +104,29 @@ y buenas prácticas integradas para solucionar problemas a la hora de desarrolla
 
 \section{Arquitectura Thin2}
 
+Para la arquitectura Thin2 se partió inicialmente del framework Angular. Partiendo
+de la capacidad de Angular de definir componentes reutilizables se le ofrecen a los
+equipos de desarrollo varios elementos predefinidos para realizar las tareas más
+comunes a la hora de escribir una página web. Entre estos componentes se pueden
+mencionar el componente para obtener configuraciones de un servidor o el que implementa
+la autenticación y autorización propia manejada dentro de BBVA.
+
+\section{Herramientas para la gestión del proyecto}
+
+Aparte de las tecnologías utilizadas para desarrollar el proyecto se utilizaron
+las siguientes herramientas para la gestión de la pasantía y el control de versiones:
+
+\subsection{Dimensions CM}
+
+Dimensions CM is un gestor de cambios y configuraciones que disminuye eficientemente
+la complejidad del desarrollo paralelo, integrando y automatizando prácticas de desarrollo
+(\cite{DIMENSIONS}).
+
+Dimensions CM es la herramienta utilizada en el banco para el control de versiones y
+el despliegue de aplicaciones.
+
+\subsection{Jira}
+
+Jira Software es una herramienta de gestión de proyectos para equipos ágiles (\cite{JIRA}).
+Entre sus características ofrece una manera sencilla de manejar y visualizar
+las tareas asignadas mediante la metodología de trabajo SCRUM.
