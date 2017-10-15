@@ -2,24 +2,76 @@
 \label{intro}
 \lhead{\emph{Introducción}}
 \addcontentsline{toc}{chapter}{Introducción}
-
-% Descripción del problema, de lo general hacia lo específico
-\blindtext 
-
-% Trabajos anteriores
-\blindtext
-\cite{fuente1} presenta un trabajo que \ldots
-
-\citeauthor{fuente2} es otro autor que \ldots
-
-% Objetivo general
-\blindtext
-
-% Objetivos específicos
-\blinditemize
-
-Cachucha\footnote{Lorem Ipsum.}.
-
 % Organización del trabajo
 % Se describe brevemente qué se hace en cada capítulo
-\blindtext[4]
+El presente informe detalla el proceso de desarrollo del software
+necesario para permitir la conexión a bases de datos manejadas con
+PostgreSQL y MicrosoftSQL Server en la arquitectura ePhoenix
+y la implementación de un componente que permita crear fácilmente
+tablas en una interfaz web para la arquitectura Thin2.
+
+El documento se organiza en capítulos de la siguiente forma: la
+Introducción al proyecto de Pasantías; en el Capítulo 1 se menciona
+el contexto empresarial y el cargo ocupado por el pasante en la
+consultora Everis durante la pasantía; en el Capítulo 2 se explican
+los fundamentos teóricos necesarios para la comprensión del problema y
+la solución planteada; en el Capítulo 3 se detallan las tecnologías
+implicadas en el proceso de desarrollo del proyecto; en el Capítulo 4 se
+explica el funcionamiento de la metodología de gestión de proyectos utilizada
+(SCRUM); en el Capítulo 5 se describen las actividades realizadas por el
+estudiante; finalmente se le dan al lector las Conclusiones y recomendaciones.
+
+% Descripción del problema, de lo general hacia lo específico
+\section*{Antecedentes}
+El banco BBVA es una de las entidades líderes de España, con más de 10
+millones de clientes y cerca de 30.000 empleados, prestando servicios
+financieros a través de su red de 3200 oficinas (\cite{BBVA}). Dentro de
+su área de tecnología cuenta con diferentes plataformas y arquitecturas
+utilizadas con el objetivo de reducir el tiempo y homogeneizar el desarrollo.
+
+\section*{Justificación e importancia}
+Una de las constantes a la hora de desarrollar software es que los
+requerimientos pueden cambiar a lo largo del tiempo. Ésto también
+es cierto para los empleados encargados de desarrollar aplicaciones
+dentro del banco BBVA. Es por esto que es importante que las arquitecturas
+que se utilicen para desarrollar soluciones tecnológicas, en específico
+las arquitecturas ePhoenix y Thin2, se mantengan actualizadas y se mejoren
+para poder satisfacer todas las necesidades de los desarrolladores.
+
+\section*{Planteamiento del problema}
+
+Con la finalidad de mantener las arquitecturas utilizadas en el banco lo
+más actualizadas posibles es necesario un proceso constante de mejoras de
+las mismas. Este proceso incluye una fase de levantamiento de requerimientos
+para identificar fallas o posibles mejoras de las plataformas utilizadas. Luego,
+una etapa de diseño de solución que solvente la deuda técnica detectada, para
+finalmente pasar al desarrollo, prueba y despliegue de dicha solución.
+
+Para contribuir con dicha actualización de ambas arquitecturas el pasante realizará
+una iteración de las etapas mencionadas sobre cada una de las plataformas para
+así producir un evolutivo para ePhoenix y Thin2.
+
+\section*{Objetivos}
+A continuación se detallan el objetivo general y los objetivos específicos que
+se buscan lograr en el desarrollo del proyecto.
+% Objetivo general
+\subsection*{Objetivo General}
+El objetivo general de la pasantía es identificar posibles mejoras para las arquitecturas
+de desarrollo ePhoenix y Thin2 utilizadas en el banco BBVA, y una vez
+identificadas diseñar e implementar dichas mejoras para enriquecer la experiencia
+de los desarrolladores.
+% Objetivos específicos
+\subsection*{Objetivos Específicos}
+\begin{itemize}
+  \item Levantar información de uso de la arquitectura ePhoenix.
+  \item Una vez identificada una carencia, diseñar una solución para
+        mejorar la arquitectura.
+  \item Implementar y probar la solución diseñada en ePhoenix.
+  \item Levantar información de uso de la arquitectura Thin2.
+  \item Una vez identificada una carencia, diseñar una solución para
+        mejorar la arquitectura Thin2.
+  \item Implementar y probar la solución diseñada en Thin2.
+  \item Documentar y divulgar las mejoras implementadas para su
+        posterior uso por los equipos de desarrollo del banco.
+\end{itemize}
+

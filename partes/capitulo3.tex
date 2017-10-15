@@ -4,6 +4,102 @@
 
 En este capítulo se mencionan las herramientas utilizadas para el desarrollo
 del proyecto de pasantía. Dichas herramientas son descritas brevemente y se menciona
-su uso como parte de la solución propuesta.
+su uso dentro de la solución planteada.
 
-\subsection{Arquitectura ePhoenix}
+\section{Java}
+
+Java es un lenguaje de programación de propósito general, concurrente, basado en clases
+y orientado a objetos. Está diseñado para ser lo suficientemente sencillo para
+que muchos programadores puedan alcanzar fluidez en el lenguaje. (\cite{JAVA})
+
+\section{OSGI}
+
+OSGI es un conjunto de especificaciones que definen un sistema dinámico formado por componentes
+para Java. Estas especificaciones permiten un modelo de desarrollo donde las aplicaciones
+son dinámicamente compuestas por muchos componentes reutilizables (\cite{OSGI}).
+
+En la figura \ref{layers} se describe el modelo por capas definido por OSGI:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.4\textwidth]{layering-osgi}
+\caption[Capas de OSGI]{Modelo por capas definido en OSGI. (\cite{OSGI})}
+\label{layers}
+\end{figure}
+
+La siguiente lista contiene una breve descripción de los términos:
+\begin{itemize}
+\item \textbf{Bundles}: los Bundles son los componentes de OSGi hechos por los desarrolladores.
+\item \textbf{Servicios}: la capa de servicios conecta bundles de una manera dinámica intercambiando objectos Java.
+\item \textbf{Ciclo de vida}: el API para instalar, arrancar, detener, actualizar y desinstalar un bundle.
+\item \textbf{Módulos}: la capa que define como un bundle puede importar y exportar código.
+\item \textbf{Seguridad}: la capa que determina los aspectos de seguridad.
+\item \textbf{Ambiente de Ejecución}: define que métodos y clases están disponibles en una plataforma específica.
+\end{itemize}
+
+
+\section{Apache Felix}
+
+Apache Felix es un esfuerzo de la comunidad Apache para implementar especificación de
+la plataforma OSGI bajo la licencia Apache. La especificación OSGI es ideal para
+cualquier proyecto interesado en los principios de modularidad, desarrollo orientado
+a componentes y desarrollo orientado a servicios (\cite{FELIX}).
+
+\section{JDBC}
+
+El \emph{API} JDBC (\emph{Java Database Connectivity}) es el estándar en la industria
+para conectividad independiente del manejador de base de datos entre programas escritos en
+Java y una gran variedad de bases de datos (\cite{JDBC}).
+
+\section{Oracle}
+
+(\cite{ORACLE}).
+La base de datos Oracle es un sistema de manejo de base de datos Objeto-Relacional (\cite{ORACLE})
+producido y mantenido por Oracle Corporation.
+
+\section{PostgreSQL}
+
+PostgreSQL es un poderoso sistema de bases de datos Objeto-Relacional. Tiene más de
+15 años de desarrollo activo y una arquitectura que se ha ganado la reputación de tener
+integridad de datos, confiabilidad y correctitud de datos (\cite{POSTGRE}).
+
+\section{Microsoft SQL Server}
+Microsoft SQL Server es un sistema de manejo de bases de datos relacional desarrollado por
+Microsoft.
+
+\section{Arquitectura ePhoenix}
+
+Construido sobre la base de Apache Felix, la arquitectura ePhoenix le brinda a los
+equipos de desarrollo del BBVA todas las herramientas necesarias para desarrollar programas
+que realicen procesamiento por lotes o publiquen servicios web.
+
+Abarcar todas las funcionalidades que ofrece la arquitectura escapa del alcance del
+proyecto de pasantías, por lo que se trabajará con los componentes de ePhoenix
+que se encargan de realizar las conexiones a bases de datos usando JDBC.
+
+\section{HTML}
+
+HTML, que significa Lenguaje de Marcado para Hipertextos (HyperText Markup Language)
+es el elemento de construcción más básico de una página web y se usa para crear y
+representar visualmente una página web. Determina el contenido de la página web,
+pero no su funcionalidad (\cite{HTML}).
+
+\section{Javascript}
+
+JavaScript es un lenguaje ligero e interpretado, orientado a objetos, más conocido
+como el lenguaje de script para páginas web. Es un lenguaje script multi-paradigma, dinámico,
+soporta estilos de programación funcional, orientada a objetos e imperativa (\cite{JS}).
+
+\section{Node.js}
+Node.js es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8
+de Chrome. Node.js usa un modelo de operaciones E/S sin bloqueo y orientado a eventos.
+El ecosistema de paquetes de Node.js, npm, es el ecosistema mas grande de librerías
+de código abierto en el mundo (\cite{NODE}).
+
+\section{Angular}
+Angular es una plataforma escrita en JavaScript que facilita el proceso
+de crear aplicaciones para la web. Angular combina plantillas declarativas, injeccion de dependencias
+y buenas prácticas integradas para solucionar problemas a la hora de desarrollar (\cite{ANGULAR}).
+
+\section{Arquitectura Thin2}
+
