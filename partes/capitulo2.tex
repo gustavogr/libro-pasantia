@@ -36,5 +36,22 @@ mantenibilidad del código, debido a que la encapsulación de las funcionalidade
 detectar con mayor facilidad de donde proviene una falla.
 
 \section{Modelo Vista Controlador}
+Modelo-Vista-Controlador (MVC) es un patrón de diseño de software, especialmente útil
+para diseñar interfaces de usuario. Se basa en la separación de los datos y lógica de
+negocio, la interfaz gráfica a mostrar y el módulo encargado de atender y responder a
+los eventos generados por el usuario en tres componentes distintos (\cite{MVC}). Estos
+componentes quedan definidos de la siguiente manera:
 
+\begin{itemize}
+  \item \textbf{Modelo}: se encarga de representar los datos que maneja el sistema y
+  la funcionalidad asociada que tengan estos modelos.
+  \item \textbf{Vista}: está a cargo de mostrar la representación visual del modelo
+  para que el usuario interactúe fácilmente con el sistema.
+  \item \textbf{Controlador}: es el módulo encargado de coordinar las vistas con el modelo.
+  Para ello atiende los eventos que pueda generar el usuario para luego actualizar
+  adecuadamente la vista y el modelo.
+\end{itemize}
 
+Este patrón de arquitectura de software se ha vuelto bastante común en el desarrollo
+de interfaces de usuario por su ventajas en cuanto a reutilización y mantenibilidad
+del código.
