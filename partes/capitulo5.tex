@@ -124,9 +124,21 @@ detallados de como realizar estas conexiones.
 \end{itemize}
 \subsection{Actividades}
 \subsubsection{Reunión con distintos equipos de desarrollo}
+Al igual que con ePhoenix se llevaron acabo reuniones con los desarrolladores
+de aplicaciones web para que pudieran dar recomendaciones sobre que funcionalidad
+mejoraría su experiencia a la hora de crear aplicaciones.
 \subsubsection{Análisis de la información recolectada}
+Después de recolectada y analizada la información se hizo notar que una operación
+bastante común a la hora de realizar aplicaciones web para el banco era mostrar
+información en tablas. Este proceso a su vez suele ser tedioso y con resultados
+bastante heterogéneos. Es por esto que se decidió crear un componente para Thin2
+que facilitara la creación de tablas de datos.
 \subsubsection{Diseño de solución para facilitar la creación de tablas de datos}
-
+Para facilitar la creación de tablas se decidió crear un componente reutilizable
+de Angular. Este componente, llamado \emph{th2-grid-component}, recibiría como
+parámetros de entrada un objeto JSON que describe las columnas a crear, un objeto
+JSON con la información a mostrar en la tabla, y una función opcional que determina
+el comportamiento a realizar si se hace click en una celda de la tabla.
 
 \section{Séptimo Sprint}
 
@@ -135,16 +147,26 @@ detallados de como realizar estas conexiones.
   \item Implementar versión básica del componente de tablas.
 \end{itemize}
 \subsection{Actividades}
-
+\subsubsection{Implementar primera versión del componente}
+En esta primera iteración se le dió mayor prioridad a desarrollar las características
+básicas del componente, que son poder crear tablas con un formato sencillo y que muestren
+la información deseada.
 
 
 \section{Octavo Sprint}
 
 \subsection{Objetivos}
 \begin{itemize}
-  \item Implementar segunda fase del componente que permita modificar otros atributos de las tablas.
+  \item Implementar segunda fase del componente.
 \end{itemize}
 \subsection{Actividades}
+\subsubsection{Implementar mejora que permita darle formato a las tablas.}
+Se mejoró el componente para que pudiera recibir clases HTML para cada columna
+para que el desarrollador pueda darle formatos específicos a las columnas y a las celdas
+de la tabla.
+\subsubsection{Permitir que el componente reciba por parámetro la función a ejecutar.}
+Luego se pasó a implementar la útlima funcionalidad deseada, que permite que el
+componente reciba la función a ejecutar si se hace click sobre una celda de la tabla.
 
 \section{Noveno Sprint}
 
@@ -154,6 +176,13 @@ detallados de como realizar estas conexiones.
   \item Documentar y divulgar la creación del nuevo componente para Thin2.
 \end{itemize}
 \subsection{Actividades}
+\subsubsection{Desplegar el componente desarrollado a través de Dimensions}
+El componente implementado fue desplegado a través de Dimensions para que esté
+disponible en el repositorio de artefactos interno del banco.
+\subsubsection{Actualizar documentación sobre la arquitectura}
+Se llevó acabo la actualización de la documentación interna del banco sobre
+Thin2 para agregar un inciso sobre el nuevo componente implementado con
+una breves instrucciones sobre como utilizar dicha funcionalidad.
 
 \section{Décimo Sprint}
 
@@ -162,3 +191,8 @@ detallados de como realizar estas conexiones.
   \item Crear una aplicación de ejemplo que muestre el uso del componente de tablas.
 \end{itemize}
 \subsection{Actividades}
+\subsubsection{Desarrollar una pequeña aplicación web de ejemplo}
+Para facilitar el uso del componente de tablas por parte de los equipos de
+desarrollo el pasante implementó una pequeña aplicación web que ejemplificara
+como utilizar el componente desarrollado. En el apéndice \ref{apendiceB} se muestra parte
+del código utilizado para crear una tabla y el resultado correspondiente en el navegador.
