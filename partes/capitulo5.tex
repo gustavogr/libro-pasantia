@@ -2,3 +2,163 @@
 \label{capitulo4}
 \lhead{Capítulo 4. \emph{Desarrollo del Proyecto}}
 
+En este capítulo se detallan las actividades realizadas para el
+desarrollo del proyecto de pasantías. El proyecto fue realizado
+mediante la metodología de desarrollo SCRUM descrita en el capítulo
+anterior, con \emph{Sprints} de dos semanas de duración, por lo
+que la pasantía quedó dividida en 10 \emph{sprints}. El proyecto
+se divide en dos grandes fases: el desarrollo del evolutivo para ePhoenix
+y el desarrollo del evolutivo para Thin2. A su vez, cada etapa contempla
+las fases de levantamiento de información, análisis, diseño, implementación,
+pruebas y despliegue de los artefactos desarrollados. A continuación se
+expone por \emph{Sprint} los objetivos y las actividades realizadas.
+
+\section{Primer Sprint}
+
+\subsection{Objetivos}
+\begin{itemize}
+\item Estudio de las herramientas utilizadas en el banco.
+\end{itemize}
+\subsection{Actividades}
+\subsubsection{Leer documentación de las arquitecturas}
+Para ambas arquitecturas (ePhoenix y Thin2) existe documentación interna del BBVA
+para su uso, la cual fué leída por el estudiante.
+\subsubsection{Asistir a formaciones sobre el uso de las arquitecturas}
+Dentro del banco se ofrecen formaciones a los nuevos equipos de desarrollo
+sobre como utilizar las arquitecturas del banco para desarrollar aplicaciones con
+ellas. El pasante asisitió a una formación para cada arquitectura para tener
+una perspectiva más práctica sobre el uso de las plataformas.
+\subsubsection{Realizar tutoriales}
+Para asentar los conocimientos adquiridos en las actividades previas se propuso
+realizar tutoriales sobre las herramientas a utilizar. Para Thin2 se realizó un
+tutorial de Angular (el \emph{framework} sobre el cual se basa Thin2) y para ePhoenix
+se siguieron las guías mencionadas en la documentación para realizar un bundle sencillo
+de procesamiento por lotes.
+
+\section{Segundo Sprint}
+
+\subsection{Objetivos}
+\begin{itemize}
+  \item Levantar información sobre necesidades en ePhoenix.
+  \item Detectar una mejora o carencia en la arquitectura.
+  \item Diseñar una solución para dicha carencia.
+\end{itemize}
+\subsection{Actividades}
+\subsubsection{Reunión con distintos equipos de desarrollo}
+Se concretaron reuniones breves con los distintos equipos de desarrollo del banco
+para que pudieran plantear que características piensan que se podrían mejorar o agregar a la
+arquitectura ePhoenix.
+\subsubsection{Análisis de la información recolectada}
+Tomando en cuenta los comentarios recibidos en las reuniones informativas se llegó
+a la conclusión que existía la necesidad de poderse conectar a bases de datos de otros
+manejadores distintos a Oracle.
+\subsubsection{Diseño de solución para conectar con otros manejadores de Base de datos}
+Una vez analizados los \emph{bundles} que toman parte en la realización de conexiones a bases
+de datos se determinó que se necesita crear un bundle para cada driver de conexión a base de
+datos. Después de creados estos componentes, se debe implementar un \emph{bundle} que permita
+la inclusión de estos drivers en el componente de conexión a base de datos. Finalmente se deberá
+modificar la interfaz de administración de ePhoenix para permitirle a los usuarios
+crear conexiones de distintos proveedores de base de datos.
+
+\section{Tercer Sprint}
+
+\subsection{Objetivos}
+\begin{itemize}
+  \item Implementar los \emph{bundles} necesarios para realizar conexiones.
+\end{itemize}
+\subsection{Actividades}
+\subsubsection{Convertir los drivers de PostgreSQL y Microsoft SQL en \emph{bundles}}
+Para esto se descargaron los drivers de PostgreSQL y Microsoft SQL disponibles en
+internet y se realizaron las modificaciones necesarias para que sea reconocido por
+OSGI como un bundle.
+\subsubsection{Implementar los \emph{bundles} de tipo fragmento}
+Luego, el pasante pasó a crear los \emph{bundles} responsables de comunicar los
+drivers de los manejadores de base de datos con el componente que crea las conexiones
+a base de datos.
+\subsubsection{Probar las conexiones creadas}
+Una vez creados los artefactos mencionados en las actividades pasadas se procedió
+a crear un \emph{bundle} de prueba que realizara una conexión con una base de datos
+PostgreSQL y una manejada con Microsoft SQL Server y reportara éxito en caso de
+realizar la conexión satisfactoriamente.
+
+\section{Cuarto Sprint}
+
+\subsection{Objetivos}
+\begin{itemize}
+  \item Modificar los bundles de la interfaz de administración para crear nuevas
+  conexiones.
+\end{itemize}
+\subsection{Actividades}
+\subsubsection{Agregar un campo desplegable que permita elegir el tipo de base de datos}
+Los equipos de desarrollo cuentan con una interfaz administrativa para la creación y configuración
+de conexiones para sus aplicaciones. En las figuras del apéndice \ref{apendiceA} se pueden ver las
+modificaciones realizadas a la interfaz.
+\subsubsection{Modificar el bundle que crea la configuracion para la conexión}
+Adicionalmente existe otro \emph{bundle} que es el encargado de una vez configurada la conexión
+en el tablero administrativo, cree los archivos de configuración necesarios para establecer
+la conexión a la base de datos.
+
+\section{Quinto Sprint}
+
+\subsection{Objetivos}
+\begin{itemize}
+  \item Desplegar los bundles implementados para su utilización.
+\end{itemize}
+\subsection{Actividades}
+\subsubsection{Desplegar con Dimensions los bundles}
+Una vez implementados y probados los componentes necesarios, se procedió a publicar
+el desarrollo a través de la herramienta \emph{Dimensions} para que esté disponible
+en los servidores de producción para su uso por los equipos de desarrollo.
+\subsubsection{Documentar la solución planteada}
+Se actualizó la documentación interna de la arquitectura ePhoenix para que reflejara
+la posibilidad de crear conexiones de bases de datos de otros proveedores con pasos
+detallados de como realizar estas conexiones.
+
+\section{Sexto Sprint}
+
+\subsection{Objetivos}
+\begin{itemize}
+  \item Levantar información sobre necesidades en Thin2.
+  \item Detectar una mejora o carencia en la arquitectura.
+  \item Diseñar una solución para dicha carencia.
+\end{itemize}
+\subsection{Actividades}
+\subsubsection{Reunión con distintos equipos de desarrollo}
+\subsubsection{Análisis de la información recolectada}
+\subsubsection{Diseño de solución para facilitar la creación de tablas de datos}
+
+
+\section{Séptimo Sprint}
+
+\subsection{Objetivos}
+\begin{itemize}
+  \item Implementar versión básica del componente de tablas.
+\end{itemize}
+\subsection{Actividades}
+
+
+
+\section{Octavo Sprint}
+
+\subsection{Objetivos}
+\begin{itemize}
+  \item Implementar segunda fase del componente que permita modificar otros atributos de las tablas.
+\end{itemize}
+\subsection{Actividades}
+
+\section{Noveno Sprint}
+
+\subsection{Objetivos}
+\begin{itemize}
+  \item Desplegar el componente en el repositorio de artefactos del banco.
+  \item Documentar y divulgar la creación del nuevo componente para Thin2.
+\end{itemize}
+\subsection{Actividades}
+
+\section{Décimo Sprint}
+
+\subsection{Objetivos}
+\begin{itemize}
+  \item Crear una aplicación de ejemplo que muestre el uso del componente de tablas.
+\end{itemize}
+\subsection{Actividades}
