@@ -23,6 +23,12 @@ filas y columnas. Se le hace referencia a las tablas como relaciones ya que repr
 coleccion de objetos del mismo tipo. La habilidad de recuperar información relacionada de una
 tabla es la base para el término Base de datos relacional (\cite{RELACIONAL}).
 
+\section{Manejador de Base de datos}
+Los manejadores de bases de datos son aplicaciones de software que cumplen con la función
+de gestionar la comunicación entre los usuarios y las aplicaciones con las base de datos.
+Los manejadores ofrecen una interfaz que permite definir, crear, consultar, actualizar
+y administrar distintas bases de datos.
+
 \section{Desarrollo Orientado a Componentes}
 
 Este método de diseño de software establece que a la hora de construir un sistema
@@ -32,8 +38,36 @@ de una interfaz un servicio predefinido y que es capaz de comunicarse con otros
 componentes (\cite{COMPONENT}). Esta estrategia de desarrollo trae como resultado
 software que puede ser reutilizado con mayor facilidad y que es fácilmente escalable
 agregando futuros componentes que agreguen nuevas funcionalidades. Además, facilita la
-mantenibilidad del código, debido a que la encapsulación de las funcionalidades permite
-detectar con mayor facilidad de donde proviene una falla.
+mantenibilidad del código debido a varios factores, entre los que destacan la encapsulación
+de funcionalidades, la alta cohesión y el bajo acoplamiento entre los componentes de
+software manejados en este método.
+
+\section{Lenguaje de marcado}
+
+Un lenguaje de marcas es un lenguaje que anota el texto de modo que el ordenador puede manipularlo.
+Al dar formato al texto que se desea mostrar es necesario distinguir entre el texto en sí
+y las instrucciones para imprimir el texto. Las marcas de este tipo de lenguajes son las
+instrucciones para mostrar o imprimir el texto (\cite{MARCADO}).
+
+\section{Plantillas declarativas}
+
+La técnica de plantillas declarativas implica emular un lenguaje de marcado dentro de un
+lenguaje de programación. Esta estrategia nos permite que en un solo archivo podamos
+escribir el texto a mostrar con la misma sintáxis de un lenguaje de marcado ya conocido,
+con la posibilidad de además utilizar ciertas instrucciones del lenguaje de programación
+para definir comportamientos deseados sobre el texto a mostrar.
+
+\section{Inyección de dependencias}
+
+En las arquitecturas orientadas a componentes surge el problema de la resolución de
+dependencias. Cuando un sistema crece también crece el número de componentes que lo
+conforman. Ésto complica cada vez más el proceso de resolución de dependencias, es decir,
+encontrar los servicios y componentes de los cuales depende un elemento en particular.
+
+El patrón de diseño de Inyección de dependencias busca resolver este problema. La
+idea básica detrás de la inyección de dependencias es la de tener un objeto separado
+que se encargue de monitorear las dependencias de cada componente, encontrar
+servicios que provean éstas dependencias y conectarlos con el componente (\cite{INYECCION}).
 
 \section{Modelo Vista Controlador}
 Modelo-Vista-Controlador (MVC) es un patrón de diseño de software, especialmente útil
@@ -55,3 +89,12 @@ componentes quedan definidos de la siguiente manera:
 Este patrón de arquitectura de software se ha vuelto bastante común en el desarrollo
 de interfaces de usuario por su ventajas en cuanto a reutilización y mantenibilidad
 del código.
+
+\section{Gestor para control de versiones}
+
+El control de versiones puede ser definido como el manejo de los cambios a documentos,
+archivos o cualquier otra colección de información. Un gestor de control de versiones
+se encarga de registrar e identificar las versiones de un archivo en específico, marcando
+además el autor y el momento en el que fueron realizadas las modificaciones. Esto permite
+que las distintas versiones del documento puedan ser luego comparadas, restauradas, y en
+algunos casos, mezcladas (\cite{VERSION}).
