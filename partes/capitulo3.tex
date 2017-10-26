@@ -74,7 +74,10 @@ Microsoft.
 
 Construido sobre la base de Apache Felix, la arquitectura ePhoenix le brinda a los
 equipos de desarrollo del BBVA todas las herramientas necesarias para desarrollar programas
-que realicen procesamiento por lotes o publiquen servicios web.
+que realicen procesamiento por lotes o publiquen servicios web. Cuando un equipo de
+desarrolladores se disponga a realizar aplicaciones con esta arquitectura se le despliegan
+en un servidor dedicado Apache Félix junto con los bundles que conforman ePhoenix para
+que los desarrolladores desplieguen sus propios bundles que implementen su lógica de negocio.
 
 Abarcar todas las funcionalidades que ofrece la arquitectura escapa del alcance del
 proyecto de pasantías, por lo que se trabajará con los componentes de ePhoenix
@@ -114,12 +117,19 @@ y reusabilidad de código.
 
 \section{Arquitectura Thin2}
 
-Para la arquitectura Thin2 se tomó como base el framework de aplicaciones web Angular. Partiendo
+A diferencia de ePhoenix, Thin2 no está basado en OSGI.
+Para Thin2 se tomó como base el framework de aplicaciones web Angular. Partiendo
 de la capacidad de Angular de definir componentes reutilizables se le ofrecen a los
 equipos de desarrollo varios elementos predefinidos para realizar las tareas más
 comunes a la hora de escribir una página web. Entre estos componentes se pueden
 mencionar el componente para obtener configuraciones de un servidor o el que implementa
 la autenticación y autorización propia manejada dentro de BBVA.
+
+En la práctica, la arquitectura Thin2 está conformada por un conjunto de librerías
+escritas con Angular puestas a la disposición de los equipos de desarrollo a través
+del repositorio interno de BBVA. Una vez descargadas estas librerías junto con
+Angular, los desarrolladores pueden utilizar los componentes predefinidos en la
+arquitectura para realizar sus aplicaciones web.
 
 \section{Herramientas para la gestión del proyecto}
 
