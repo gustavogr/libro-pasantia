@@ -38,6 +38,9 @@
 % Para tener mas de un título
 \usepackage{titling}
 
+% Incluir PDF
+\usepackage[final]{pdfpages}
+
 % Paquetes locales
 % Puedes agregar paquetes locales (archivos .sty) en un subdirectorio % 'paquetes'.
 % Utiliza la sintaxis \usepackage{paquetes/nombrePaquete}
@@ -90,42 +93,14 @@ Ingeniero de Computación}
 
 \setstretch{1.3}
 
-% Se incluye el acta de evaluación, verificar que se corresponda
-% con el formato aceptado actualmente por el Decanato.
-\input{./partes/acta}
+% Se incluye el acta de evaluación de jurado y de la CCT
+\setboolean{@twoside}{false}
+
+\includepdf[pages=-, offset=75 -75]{PDF/ActaCCT.pdf}
+\includepdf[pages=-, offset=75 -75]{PDF/ActaJurado.pdf}
 
 % El resumen debe ser de una sola página
-\addtotoc{Resumen}
-\abstract{
-\addtocontents{toc}{\vspace{1em}}
-
-En este documento se detallan las actividades realizadas por el autor durante su
-período de pasantías en el desarrollo de mejoras a las arquitecturas tecnológicas
-utilizadas por el banco español BBVA.
-
-BBVA en búsqueda de estandarizar y de facilitar el desarrollo de aplicaciones
-define cuales son las plataformas a utilizar para implementar dichas aplicaciones.
-Entre estas plataformas se encuentran las arquitecturas ePhoenix, escrita en Java,
-y la arquitectura Thin2, basada en el framework de Javascript Angular.
-
-Fué responsabilidad del estudiante identificar posibles mejoras a estas arquitecturas,
-y luego diseñar e implementar dichas mejoras en ambas plataformas. Para la gestión del
-trabajo del estudiante se utilizó la metodología ágil de desarrollo
-SCRUM.
-
-El proyecto de pasantía dió como resultado final la certificación de conexiones
-a bases de datos manejadas con PostgreSQL y Microsoft SQL Server en la arquitectura
-ePhoenix y el desarrollo de un componente reutilizable para crear tablas en la
-arquitectura Thin2.
-
-% Las palabras clave son generalmente los nombres de áreas de investigación a
-% los cuales está asociado el trabajo. Generalmente son tres o cuatro.
-\noindent \begin{small} \textbf{Palabras clave}: arquitectura, tecnológica, desarrollo, Java, Angular.
-\end{small}
-
-% Iniciar nueva página luego del resumen
-\clearpage
-\setstretch{1.3}
+\input{./partes/resumen}
 
 % Begin the Dedication page
 
@@ -138,8 +113,6 @@ arquitectura Thin2.
 
     A mi familia, quienes son la base sobre la que se levantan todos mis logros.
 }
-
-\addtocontents{toc}{\vspace{2em}}
 
 
 % Agradecimientos
